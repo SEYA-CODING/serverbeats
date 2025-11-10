@@ -1,0 +1,42 @@
+<!-- ServerBeats v1.1.0 by SEYA CODING -->
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>ServerBeats</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://www.youtube.com/iframe_api"></script>
+</head>
+<body>
+  <div id="wrapper" class="rgb-border">
+    <div id="left">
+      <img id="logo" src="server_logo.gif" onerror="this.src='logo_default.gif'"/>
+      <div id="serverName">Server</div>
+    </div>
+
+    <div id="main">
+      <div id="ownerPanel">
+        <input id="yturl" placeholder="Paste YouTube URL here (owner only)">
+        <input id="ownerVolume" type="range" min="0" max="100" value="60">
+        <button id="playBtn">Play (Server)</button>
+        <button id="stopBtn">Stop</button>
+        <div id="ownerNote">Only the server owner can control the music.</div>
+      </div>
+
+      <div id="playerControls">
+        <div>Local Volume <span id="volLabel">60%</span></div>
+        <input id="localVol" type="range" min="0" max="100" value="60">
+      </div>
+    </div>
+
+    <div id="closeBtn">✕</div>
+  </div>
+
+  <div id="blockedMsg" style="display:none">
+    Autoplay blocked — click here to allow playback.
+  </div>
+
+<script src="script.js"></script>
+</body>
+</html>
