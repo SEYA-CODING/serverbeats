@@ -1,0 +1,28 @@
+/* ServerBeats v1.1.0 by SEYA CODING */
+*{box-sizing:border-box;font-family:Arial,Helvetica,sans-serif}
+body{background:transparent;margin:0;padding:0;user-select:none}
+#wrapper{
+  width:600px;height:180px;background:rgba(10,10,10,0.85);color:#fff;border-radius:12px;display:flex;align-items:center;padding:12px;position:relative;
+  box-shadow:0 8px 20px rgba(0,0,0,0.6);
+}
+.rgb-border{position:relative;border-radius:14px;}
+.rgb-border:before{
+  content:"";position:absolute;inset:-3px;border-radius:16px;padding:2px;
+  background:linear-gradient(90deg,#ff0000,#ff7a00,#ffff00,#0bff00,#00ffff,#0000ff,#7a00ff,#ff00ff,#ff0000);
+  -webkit-mask:linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite:xor;mask-composite:exclude;filter:blur(6px);
+  animation:rgb 4s linear infinite;z-index:-1;
+}
+@keyframes rgb{0%{filter:hue-rotate(0deg)}100%{filter:hue-rotate(360deg)}}
+#left{width:140px;text-align:center;padding-right:10px;border-right:1px solid rgba(255,255,255,0.05)}
+#logo{width:100px;height:100px;object-fit:contain;border-radius:6px}
+#serverName{margin-top:6px;font-weight:700}
+#main{flex:1;padding-left:12px}
+#ownerPanel input#yturl{width:100%;padding:8px;border-radius:6px;border:1px solid rgba(255,255,255,0.08);background:rgba(255,255,255,0.02);color:#fff;margin-bottom:6px}
+#ownerPanel input[type=range]{width:100%;margin-bottom:6px}
+#ownerPanel button{padding:6px 10px;margin-right:6px;border-radius:6px;border:none;cursor:pointer;background:rgba(255,255,255,0.06);color:#fff}
+#ownerNote{font-size:12px;color:#bbb;margin-top:6px}
+#playerControls{margin-top:8px}
+#localVol{width:100%}
+#closeBtn{position:absolute;top:6px;right:8px;cursor:pointer;color:#fff;opacity:0.8}
+#blockedMsg{position:fixed;left:50%;top:50%;transform:translate(-50%,-50%);background:#111;padding:16px;border-radius:8px;color:#fff}
